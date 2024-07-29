@@ -1,0 +1,98 @@
+body {
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  font-family: "Roboto", sans-serif;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+}
+
+.dropdownMenu {
+  position: relative;
+  width: 300px;
+  font-family: Arial, sans-serif;
+
+  .selected-options {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ced4da;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .option {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      margin: 2px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+
+      .remove {
+        margin-left: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      svg {
+        margin-right: 5px; // Add some space between icon and text
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+
+    &:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  .dropdown-options {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ced4da;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 5px;
+
+    .dropdown-option {
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+
+      svg {
+        margin-right: 10px; // Add some space between icon and text
+      }
+    }
+  }
+}
